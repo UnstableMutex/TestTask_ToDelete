@@ -7,9 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <DockPanel>
-        <ComboBox DockPanel.Dock="Top" />
-        <DataGrid>
+        <ComboBox DockPanel.Dock="Top" SelectedItem="{Binding SelectedCategory}" ItemsSource="{Binding Categories}" DisplayMemberPath="Name" />
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" DataContext="{Binding SelectedCategory}" ItemsSource="{Binding Products}">
 
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding ProductNumber}"/>
+            </DataGrid.Columns>
         </DataGrid>
 
     </DockPanel>

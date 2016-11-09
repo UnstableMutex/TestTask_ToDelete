@@ -19,7 +19,7 @@ namespace TestTask_ToDelete
 
         public static IEnumerable<Product> GetProductsByCategory(int id)
         {
-            string spName = "Product_SelectByCategory";
+            string spName = "Production.Product_SelectByCategory";
             return Constants.AdventureWorks.ExecuteSprocAccessor<Product>(spName, id).ToList();
         }
     }
