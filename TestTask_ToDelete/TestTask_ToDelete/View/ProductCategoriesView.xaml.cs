@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -11,21 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using GalaSoft.MvvmLight.Ioc;
-using TestTask_ToDelete.ViewModel;
 
-namespace TestTask_ToDelete
+namespace TestTask_ToDelete.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ProductCategoriesView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ProductCategoriesView : UserControl
     {
-        public MainWindow()
+        public ProductCategoriesView()
         {
             InitializeComponent();
-            SimpleIoc.Default.Register<IContent,MainViewModel>();
-            DataContext = SimpleIoc.Default.GetInstance<IContent>();
         }
     }
 }

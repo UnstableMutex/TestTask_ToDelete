@@ -11,21 +11,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using GalaSoft.MvvmLight.Ioc;
-using TestTask_ToDelete.ViewModel;
 
-namespace TestTask_ToDelete
+namespace TestTask_ToDelete.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MainView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : UserControl
     {
-        public MainWindow()
+        public MainView()
         {
             InitializeComponent();
-            SimpleIoc.Default.Register<IContent,MainViewModel>();
-            DataContext = SimpleIoc.Default.GetInstance<IContent>();
         }
     }
 }
