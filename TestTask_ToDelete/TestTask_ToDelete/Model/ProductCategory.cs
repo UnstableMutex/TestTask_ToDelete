@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestTask_ToDelete.Model
+﻿namespace TestTask_ToDelete.Model
 {
     class ProductCategory
     {

@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Caching;
-using System.Text;
-using System.Threading.Tasks;
 using TestTask_ToDelete.Model;
 
 namespace TestTask_ToDelete.ViewModel
@@ -30,11 +27,7 @@ namespace TestTask_ToDelete.ViewModel
             return (IEnumerable<Product>) mc.Get(key);
         }
 
-        public IEnumerable<Product> Products
-        {
-            get { return GetProductsCached(); }
-
-        }
+        public IEnumerable<Product> Products => GetProductsCached();
     }
 
     class ViewModel<T> : VMB
